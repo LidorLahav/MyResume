@@ -168,6 +168,11 @@ function App() {
                 url: "https://github.com/LidorLahav/Movies-System"
             },
             {
+                title: "Tasks Management App",
+                description: "The UI presents all users data provided from external web-services. Clients can search, update, delete and add tasks or users to manage their data. Technologies – JavaScript &amp; React",
+                url: "https://tasks-management-app.web.app"
+            },
+            {
                 title: "My Resume",
                 description: "A React application created to show my resume in more attractive format. You are actually watching it right now!",
                 url: "https://lidor-lahav-resume.herokuapp.com/"
