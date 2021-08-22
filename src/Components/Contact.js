@@ -1,6 +1,11 @@
 import React, { useState } from 'react'
 import jQuery from 'jquery'
 import axios from 'axios'
+import { sendForm } from 'emailjs-com';
+import emailkey from '../emailkey';
+import { init } from 'emailjs-com';
+import Swal from 'sweetalert2';
+init("user_dYDfwBmyrt28DShvjxCkB");
 
 
 const Contact = (props) => {
@@ -92,6 +97,28 @@ const Contact = (props) => {
         })
         return false;
     }
+
+    const handleSubmit = (e) => {
+        e.preventDefault(); // Prevents default refresh by the browser
+        sendForm(`service_ogv03re`, emailkey.TEMPLATE_ID, e.target, emailkey.USER_ID)
+            .then((result) => {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Message Sent Successfully, I will get back to you shortly'
+                })
+                // alert("Message Sent, I will get back to you shortly", result.text);
+            },
+                (error) => {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Ooops, something went wrong',
+                        text: error.text,
+                    })
+                    // console.log(error)
+                    // alert("An error occurred, Please try again", error.text);
+                });
+    };
+
     return (
         <section id="contact">
             <div className="row section-head">
@@ -104,23 +131,27 @@ const Contact = (props) => {
             </div>
             <div className="row">
                 <div className="eight columns">
-                    <form id="contactForm">
-
+                    <form id="contactForm" onSubmit={handleSubmit}>
+                        {/* <input type="hidden" name="contact_number" />
+                        <label>Name</label>
+                        <input type="text" name="user_name" />
+                        <label>Email</label>
+                        <input type="email" name="user_email" />
+                        <label>Message</label>
+                        <textarea name="message" />
+                        <input type="submit" value="Send" /> */}
                         <fieldset>
                             <div>
-                                <label>Name:</label><input type="text" value={newName} id="contactName" name="contactName" onChange={handleNameChange}></input>
+                                <label>Name:</label><input type="text" name="user_name" />
                             </div>
                             <div>
-                                <label>Email:</label><input type="text" value={newEmail} id="contactEmail" name="contactEmail" onChange={handleEmailChange}></input>
+                                <label>Email:</label><input type="email" value={newEmail} id="contactEmail" name="user_email" onChange={handleEmailChange}></input>
                             </div>
                             <div>
-                                <label>Subject:</label><input type="text" value={newSubject} id="contactSubject" name="contactSubject" onChange={handleSubjectChange}></input>
-                            </div>
-                            <div>
-                                <label>Message:</label><textarea cols="50" rows="13" type="text" value={newMessage} size="60" id="contactMessage" name="contactMessage" onChange={handleMessageChange}></textarea>
+                                <label>Message:</label><textarea cols="50" rows="13" type="text" value={newMessage} size="60" id="contactMessage" name="message" onChange={handleMessageChange}></textarea>
                             </div>
                             <div className="container">
-                                <button className="submit" type="button" onClick={handleClick}>Submit</button>
+                                <button className="submit" type="submit" value="Send">Submit</button>
                                 <button type="reset" value="Reset" className="clear" onClick={handleReset}>Clear</button>
                             </div>
                         </fieldset>
