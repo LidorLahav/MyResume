@@ -19,7 +19,7 @@ function App() {
         email: "lidorlahav@gmail.com",
         phone: "052-656-5172",
         city: "Tel-Aviv",
-        website: "https://lidor-lahav-resume.web.app/",
+        website: "https://lidor-lahav-resume.firebaseapp.com",
         resumedownload: "https://www.mediafire.com/file/70xtulbp7d9kw1g/CV+-+Lidor+Lahav.pdf/file",
         social: [
             {

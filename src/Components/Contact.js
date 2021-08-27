@@ -45,59 +45,6 @@ const Contact = (props) => {
         })
     }
 
-    const handleClick = () => {
-        jQuery(document).ready(function ($) {
-            $('#image-loader').fadeIn();
-
-            if (newName === "" || !newEmail.includes("@") || newSubject === "" || newMessage === "") {
-                alert("Message failed to send.")
-                $('#image-loader').fadeOut();
-                $('#message-warning').fadeIn();
-                return false;
-            }
-
-            var name = $('#contactForm #contactName').val();
-            var email = $('#contactForm #contactEmail').val();
-            var subject = $('#contactForm #contactSubject').val();
-            var message = $('#contactForm #contactMessage').val();
-
-            var data = {
-                name: name,
-                email: email,
-                subject: subject,
-                message: message,
-            }
-
-            console.log(data)
-
-            // {
-            //    method: "POST", 
-            //    url:"http://localhost:3002/send", 
-            //    data:  data
-            //  }
-            axios.post('https://lidor-lahav-resume.herokuapp.com/send', data).then((response) => {
-                console.log(data)
-                if (response.data.status === 'success') {
-                    alert("Message Sent.");
-                    setNewName("")
-                    setNewEmail("")
-                    setNewSubject("")
-                    setNewMessage("")
-                    $('#image-loader').fadeOut();
-                    $('#message-warning').hide();
-                    $('#contactForm').fadeOut();
-                    $('#message-success').fadeIn();
-                } else {
-                    alert("Message failed to send.")
-                    $('#image-loader').fadeOut();
-                    //$('#message-warning').html(msg);
-                    $('#message-warning').fadeIn();
-                }
-            })
-        })
-        return false;
-    }
-
     const handleSubmit = (e) => {
         e.preventDefault(); // Prevents default refresh by the browser
         sendForm(`service_ogv03re`, emailkey.TEMPLATE_ID, e.target, emailkey.USER_ID)
