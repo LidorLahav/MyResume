@@ -171,7 +171,7 @@ function App() {
             {
                 title: "My Resume",
                 description: "A React application created to show my resume in more attractive format. You are actually watching it right now!",
-                url: "https://lidor-lahav-resume.web.app"
+                url: "https://lidor-lahav-resume.firebaseapp.com"
             },
         ],
     }
