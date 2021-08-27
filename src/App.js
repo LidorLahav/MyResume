@@ -12,14 +12,14 @@ function App() {
     const main = {
         name: "Lidor Lahav",
         occupation: "Computer Science BSc student",
-        description: "Have knowledge and experience in Java, Spring Framework, TypeScript, Node.js and React with a high level of self-learning skills. \n Looking for a student position",
+        description: "I have knowledge and experience in Java, Spring Framework, TypeScript, Node.js and React with a high level of self-learning skills. \n Looking for a student position",
         image: "profilepic.jpeg",
-        bio: "I'm a Computer Science student in the 3nd year, with a passion for coding. I'm a self-learner looking for my first development job. As a student, I divide my time between University tasks and self-learning projects.",
+        bio: "I'm a Computer Science student in my last year, with a passion for coding. I'm a self-learner looking for my first development job. As a student, I divide my time between University tasks and self-learning projects.",
         contactmessage: "Have a job for me? Want to invite me to an interview? You can give me a shout by email or by using the contact form below.",
         email: "lidorlahav@gmail.com",
         phone: "052-656-5172",
         city: "Tel-Aviv",
-        website: "https://lidor-lahav-resume.herokuapp.com/",
+        website: "https://lidor-lahav-resume.web.app/",
         resumedownload: "https://www.mediafire.com/file/70xtulbp7d9kw1g/CV+-+Lidor+Lahav.pdf/file",
         social: [
             {
@@ -159,7 +159,7 @@ function App() {
         projects: [
             {
                 title: "Lucky Coupons",
-                description: "Coupon management system allows companies to generate coupons as part of advertising campaigns And marketing that they sustain. The system also has registered customers. Customers can purchase coupons.",
+                description: "Coupon management system that allows companies to generate coupons as part of advertising campaigns and marketing that they sustain. The system also has registered customers that can purchase coupons. Technologies: Java, OOP, Threads, Rest API, JPA, Spring Boot, Spring MVC, TypeScript, React & Redux, MySQL",
                 url: "http://lucky-coupons.herokuapp.com"
             },
             {
@@ -175,7 +175,7 @@ function App() {
             {
                 title: "My Resume",
                 description: "A React application created to show my resume in more attractive format. You are actually watching it right now!",
-                url: "https://lidor-lahav-resume.herokuapp.com/"
+                url: "https://lidor-lahav-resume.web.app"
             },
         ],
     }
