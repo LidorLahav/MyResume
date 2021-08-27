@@ -74,51 +74,47 @@ function App() {
         skills: [
             {
                 name: "Java",
-                level: "87%"
+                level: "92%"
             },
             {
                 name: "JavaScript",
-                level: "83%"
+                level: "88%"
             },
             {
                 name: "MySQL",
-                level: "75%"
-            },
-            {
-                name: "Node.js",
-                level: "85%"
+                level: "80%"
             },
             {
                 name: "Git",
-                level: "75%"
+                level: "80%"
             },
             {
                 name: "Spring",
-                level: "78%"
+                level: "83%"
             },
             {
-                name: "ReactJs",
-                level: "90%"
+                name: "React.js",
+                level: "95%"
             },
             {
                 name: "Python",
-                level: "65%"
+                level: "70%"
             },
             {
                 name: "Node.js",
-                level: "85%"
+                level: "90%"
             },
             {
                 name: "TypeScript",
-                level: "82%"
+                level: "87%"
             },
             {
                 name: "CSS",
-                level: "60%"
+                level: "65%"
             },
             {
                 name: "MongoDB",
-                level: "70%"
+                level: "75%"
             }
         ],
         technologies: [
@@ -130,7 +126,7 @@ function App() {
             {
                 name: "Java",
                 image: "java.jpg",
-                description: "Java is the first language I learned. The first time I learne Java was on high-school. I still use it as my main language and feel most comfortabe with it.",
+                description: "Java is the first language I learned. The first time I learned Java was on high-school. I still use it as my main language and feel most comfortabe with it.",
             },
             {
                 name: "MongoDB",
