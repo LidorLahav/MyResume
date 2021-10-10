@@ -20,7 +20,7 @@ function App() {
         phone: "052-656-5172",
         city: "Tel-Aviv",
         website: "https://lidor-lahav-resume.firebaseapp.com",
-        resumedownload: "https://www.mediafire.com/file/70xtulbp7d9kw1g/CV+-+Lidor+Lahav.pdf/file",
+        resumedownload: "https://www.mediafire.com/file/0g2vd9t4dvp8n5l/CV+-+Lidor+Lahav.pdf/file",
         social: [
             {
                 name: "facebook",
@@ -58,6 +58,12 @@ function App() {
             }
         ],
         "work": [
+            {
+                "company": "Freelancer",
+                "title": "Web Developer",
+                "years": "2021",
+                "description": "Together with another partner we build websites for small business according to the requirements of the business owner. After the construction is completed, we take care of the maintenance of the site."
+            },
             {
                 "company": "Maccabi Dent",
                 "title": "Information Technology",
@@ -167,6 +173,11 @@ function App() {
                 title: "Tasks Management App",
                 description: "The UI presents all users data provided from external web-services. Clients can search, update, delete and add tasks or users to manage their data. Technologies – JavaScript &amp; React",
                 url: "https://tasks-management-app.web.app"
+            },
+            {
+                title: "Barbershop",
+                description: "Manage barbershop website development from scratch, which includes scheduling system, gallery, shop etc. Making appointment only after creating a user with unique phone number. Manage website for admin, which includes changing business day, adding and deleting users/appointments.",
+                url: "https://snir-barbershop.herokuapp.com/"
             },
             {
                 title: "My Resume",
